@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Volcast – Alquiler de Volquetas en Maldonado</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<link rel="icon" type="image/png" href="./img/logos/volcastMini.png?v=3">
+
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-l"><span>⏰ Lun–Vie 7:30–17:30</span><span>📍 Maldonado y zonas cercanas</span></div>
+    <div class="tb-r"><a href="tel:23035246">📞 2303 5246</a><a href="https://wa.me/59891626226" target="_blank">💬 091 62 62 26</a></div>
+  </div>
+</div>
+
+<nav class="navbar">
+  <div class="wrap">
+    <button class="logo" onclick="show('inicio')"><img src="img/logos/volcastPNG2.png" alt="Volcast logo"></button>
+    <ul class="ntabs">
+      <li><button class="ntb active" onclick="show('inicio')">Inicio</button></li>
+      <li><button class="ntb" onclick="show('servicios')">Servicios y Precios</button></li>
+      <li><button class="ntb" onclick="show('como')">¿Cómo funciona?</button></li>
+      <li><button class="ntb" onclick="show('cobertura')">Cobertura</button></li>
+      <li><button class="ntb" onclick="show('nosotros')">Nosotros</button></li>
+      <li><button class="ntb" onclick="show('contacto')">Contacto</button></li>
+      <li><a href="https://wa.me/59891626226" target="_blank" class="ntb ntb-wa">💬 WhatsApp</a></li>
+    </ul>
+    <button class="ham" id="ham" aria-label="Menú"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mob-nav" id="mobNav">
+  <button class="ntb" onclick="show('inicio')">🏠 Inicio</button>
+  <button class="ntb" onclick="show('servicios')">🚛 Servicios y Precios</button>
+  <button class="ntb" onclick="show('como')">⚙️ ¿Cómo funciona?</button>
+  <button class="ntb" onclick="show('cobertura')">📍 Cobertura</button>
+  <button class="ntb" onclick="show('nosotros')">👥 Nosotros</button>
+  <button class="ntb" onclick="show('contacto')">✉️ Contacto</button>
+  <a href="https://wa.me/59891626226" target="_blank" class="ntb ntb-wa" style="display:inline-flex;align-items:center;margin-top:4px">💬 WhatsApp</a>
+</div>
+
+<!-- INICIO -->
+<section class="psec active" id="sec-inicio">
+  <div class="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="img/inicio/videoInicio.mp4" type="video/mp4">
+    </video>
+    <div class="hero-geo"></div>
+    <div class="wrap">
+      <div class="hero-content">
+        <div class="live-badge"><div class="ldot"></div>Servicio disponible ahora</div>
+        <h1><em>Servicios de volquetas</em>La solución más confiable para el transporte de residuos</h1>
+        <p class="hero-desc">Entrega en Maldonado. Flota de más de 300 volquetas para obras, reformas, demoliciones y podas. Precios claros, sin letras chicas.</p>
+        <div class="hero-actions">
+          <a href="https://wa.me/59891626226" target="_blank" class="btn btn-wa">💬 Solicitar por WhatsApp</a>
+          <button class="btn btn-ghost" onclick="show('servicios')">Ver precios →</button>
+        </div>
+        <div class="hstats">
+          <div class="hs"><div class="hs-n" data-t="300" data-s="+">300+</div><div class="hs-l">Volquetas</div></div>
+          <div class="hs"><div class="hs-n" data-t="10" data-s="+">10+</div><div class="hs-l">Vehículos</div></div>
+          <div class="hs"><div class="hs-n" data-t="10" data-s="+ años">10+ años</div><div class="hs-l">En el mercado</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tbar">
+    <div class="wrap">
+      <div class="ti"><div class="ti-i">🚛</div>Entrega inmediata</div>
+      <div class="ti"><div class="ti-i">📍</div>Servicio a domicilio</div>
+      <div class="ti"><div class="ti-i">♻️</div>Gestión responsable</div>
+      <div class="ti"><div class="ti-i">💬</div>WhatsApp directo</div>
+      <div class="ti"><div class="ti-i">⭐</div>Empresas de confianza</div>
+    </div>
+  </div>
+  <div style="padding:52px 0;background:#fff">
+    <div class="wrap">
+      <span class="chip">¿Qué buscás?</span>
+      <h2 class="sec-title">Todo lo que necesitás saber</h2>
+      <div class="qgrid">
+        <button class="qcard" onclick="show('servicios')"><div class="qi">🚛</div><div class="qt">Servicios y Precios</div><div class="qd">Flota, tamaños y tarifas claras por 48 horas.</div></button>
+        <button class="qcard" onclick="show('como')"><div class="qi">⚙️</div><div class="qt">¿Cómo funciona?</div><div class="qd">4 pasos simples del pedido a la retirada.</div></button>
+        <button class="qcard" onclick="show('cobertura')"><div class="qi">📍</div><div class="qt">Área de Cobertura</div><div class="qd">Mapa interactivo de Maldonado y alrededores.</div></button>
+        <button class="qcard" onclick="show('nosotros')"><div class="qi">👥</div><div class="qt">Nosotros</div><div class="qd">Equipo, misión, valores y sponsors.</div></button>
+        <button class="qcard qp" onclick="show('contacto')"><div class="qi">✉️</div><div class="qt">Contacto</div><div class="qd">Formulario, teléfono y WhatsApp directo.</div></button>
+      </div>
+    </div>
+  </div>
+  <div class="pg-ft">© 2025 Volcast. Todos los derechos reservados. — Maldonado, Uruguay</div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="psec" id="sec-servicios">
+  <div style="padding:52px 0">
+    <div class="wrap">
+      <span class="chip">Nuestra flota</span>
+      <h2 class="sec-title">Servicios y Precios</h2>
+      <p class="sec-sub">Elegí el tamaño ideal. Todos los precios incluyen entrega y retiro en Maldonado.</p>
+      <div class="fleet-grid">
+        <div class="fc">
+          <div class="fc-img-wrap"><img src="img/volquetas/v1.jpg" alt="Volqueta Pequena" class="fc-img-real"></div><div class="fc-badge">2 m³</div>
+          <div class="fc-body">
+            <h3 class="fc-name">Volqueta Pequeña</h3><div class="fc-cap">Capacidad: 2 m³</div>
+            <ul class="fc-uses">
+                <li>Escombros de pequeñas reformas</li>
+                <li>Trabajos de jardinería</li>
+                <li>Limpieza de hogar y patios</li>
+                <li>Espacios de acceso reducido</li>
+            </ul>
+            <div class="fc-price"><div class="fc-amt">$2.750</div><div class="fc-lbl">+ IVA por 48 hs</div></div>
+            <button class="btn btn-outline fc-cta" onclick="show('contacto')">Solicitar esta volqueta</button>
+          </div>
+        </div>
+        <div class="fc" style="border-color:var(--b)">
+          <div class="fc-hot">⭐ Más elegida</div>
+          <div class="fc-img-wrap"><img src="img/volquetas/v1.jpg" alt="Volqueta Mediana" class="fc-img-real"></div><div class="fc-badge">6 m³</div>
+          <div class="fc-body">
+            <h3 class="fc-name">Volqueta Mediana</h3><div class="fc-cap">Capacidad: 6 m³</div>
+            <ul class="fc-uses">
+                <li>Obras y reformas medianas</li>
+                <li>Demoliciones parciales</li>
+                <li>Escombros pesados</li>
+                <li>Uso industrial y construcción</li>
+            </ul>
+            <div class="fc-price"><div class="fc-amt">$3.150</div><div class="fc-lbl">+ IVA por 48 hs</div></div>
+            <button class="btn btn-primary fc-cta" onclick="show('contacto')">Solicitar esta volqueta</button>
+          </div>
+        </div>
+        <div class="fc">
+          <div class="fc-img-wrap"><img src="img/volquetas/v1.jpg" alt="Volqueta Grande" class="fc-img-real"></div><div class="fc-badge">10 m³</div>
+          <div class="fc-body">
+            <h3 class="fc-name">Volqueta Grande</h3><div class="fc-cap">Capacidad: 10 m³</div>
+            <ul class="fc-uses">
+                <li>Poda de árboles y jardines</li>
+                <li>Residuos de gran volumen</li>
+                <li>Proyectos de gran porte</li>
+                <li>⚠️ No apta para escombros</li>
+            </ul>
+            <div class="fc-price"><div class="fc-amt">$5.000</div><div class="fc-lbl">+ IVA por 48 hs</div></div>
+            <button class="btn btn-outline fc-cta" onclick="show('contacto')">Solicitar esta volqueta</button>
+          </div>
+        </div>
+      </div>
+      <!-- EXTRA - SEGURO -->
+      <div class="fleet-note">💡 
+        <strong>¿Más tiempo?</strong> 
+        Alquilá por días, semanas o meses. Tarifas especiales en Maldonado. 
+        <a href="https://wa.me/59891626226" target="_blank">Escribínos →</a>
+      </div>
+
+      <!-- EXTRA - SEGURO -->
+      <div style="margin-top:58px;padding-top:46px;border-top:2px solid var(--gl)" id="Extra seguros">
+        <span class="chip">Extras del servicio</span>
+        <h3 class="sec-title">Nuestro servicio también incluye</h3>
+        <p class="sec-sub">Garantizamos tu tranquilidad en cada proyecto.</p>
+        <div class="seg-grid">
+          <div class="sg">
+            <div class="sg-ico">🛡️</div>
+            <div>
+              <strong>Seguridad civil</strong>
+              <p>Seguro de seguridad civil en caso de accidentes.</p>
+            </div>
+          </div>
+          <div class="sg">
+            <div class="sg-ico">🛡️</div>
+            <div>
+              <strong>Volquetas</strong>
+              <p>Seguro de volquetas contra accidentes.</p>
+            </div>
+          </div>
+          <div class="sg">
+            <div class="sg-ico">🛡️</div>
+            <div>
+              <strong>Operación</strong>
+              <p>Seguro de operación de la volqueta.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PERMISOS INTENDENCIA -->
+      <div style="margin-top:58px;padding-top:46px;border-top:2px solid var(--gl)" id="permisosIntendencia">
+        <span class="chip">Información importante</span>
+        <h3 class="sec-title" >Permisos de la Intendencia de Maldonado</h3>
+        <p class="sec-sub">Para obras comerciales, industriales o de constructoras que requieran ocupar vía pública, la normativa departamental exige permiso municipal previo.</p>
+        <p class="sec-sub">Los particulares en predio propio no lo necesitan.</p>
+        <div class="pg">
+          <div class="pc">
+            <div class="pc-i">🔧</div>
+            <h4>¿Cuándo se necesita?</h4>
+            <p>Aplica a obras no residenciales (constructoras, empresas, comercios) que ocupen vereda o calzada pública. En otro caso, no se requiere.</p>
+          </div>
+          <div class="pc">
+            <div class="pc-i">🏛️</div>
+            <h4>¿Quién tramita?</h4>
+            <p>El propietario del inmueble o la empresa. En Volcast te asesoramos en todo el proceso para que esté en regla.</p>
+            <a href="https://www.maldonado.gub.uy/tramites" target="_blank" class="pc-a">Web IDM →</a>
+          </div>
+          <div class="pc">
+            <div class="pc-i">📋</div>
+            <h4>Documentación</h4>
+            <p>La documentación requerida puede variar según el tipo de obra y la zona. Te guiamos paso a paso para presentar todo correctamente.</p>
+            <p><a href="https://www.maldonado.gub.uy/tramites" target="_blank" class="pc-a">Requisitos vigentes en IDM →</a></p>
+          </div>
+          <div class="pc">
+            <div class="pc-i">💰</div>
+            <h4>Costo del permiso</h4>
+            <p>Hay una tasa municipal a abonar en la IDM. El monto varía según zona y plazo. Consultanos para orientarte.</p>
+          </div>
+        </div>
+        <div class="palert">
+          <div style="font-size:1.3rem;flex-shrink:0;margin-top:1px">⚠️</div>
+          <p><strong>Importante:</strong> Colocar una volqueta en vía pública sin permiso puede generar multas con la IDM. Regularizá siempre antes de la entrega. ¿Tenés dudas? <a onclick="show('contacto')">Contactanos</a> y te ayudamos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sec-cta"><div class="wrap"><h3>¿Listo para pedir tu volqueta?</h3><p>Respuesta inmediata. Entrega el mismo día en la mayoría de los casos.</p><div class="cta-row"><a href="https://wa.me/59891626226" target="_blank" class="btn btn-wa">💬 Pedir por WhatsApp</a><button onclick="show('contacto')" class="btn btn-white">Formulario de contacto</button></div></div></div>
+  <div class="pg-ft">© 2025 Volcast. Todos los derechos reservados.</div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="psec" id="sec-como">
+  <div class="how-pg">
+    <div class="wrap">
+      <span class="chip">El proceso</span>
+      <h2 class="sec-title">¿Cómo funciona?</h2>
+      <p class="sec-sub">Sin complicaciones. Coordinamos todo para que vos te enfocás en tu proyecto.</p>
+      <div class="how-steps-v2">
+        <div class="hst-v2">
+          <div class="hst-v2-num">01</div>
+          <div class="hst-v2-icon">📞</div>
+          <div class="hst-v2-body">
+            <h4>Nos contactás</h4>
+            <p>Por WhatsApp, teléfono o formulario. Confirmamos disponibilidad en menos de 2 horas hábiles.</p>
+            <span class="hst-tag">⏱ Menos de 2 hs</span>
+          </div>
+        </div>
+
+        <div class="hst-v2">
+          <div class="hst-v2-num">02</div>
+          <div class="hst-v2-icon">📋</div>
+          <div class="hst-v2-body">
+            <h4>Coordinamos</h4>
+            <p>Acordamos lugar, fecha y hora. Si la volqueta va en vía pública y no sos particular, debés gestionar el permiso IDM.</p>
+            <span class="hst-tag">🏛 Nosotros te asesoramos</span>
+          </div>
+        </div>
+
+        <div class="hst-v2">
+          <div class="hst-v2-num">03</div>
+          <div class="hst-v2-icon">🚛</div>
+          <div class="hst-v2-body">
+            <h4>Entrega puntual</h4>
+            <p>Llevamos la volqueta al lugar exacto. Nuestros choferes la ubican con precisión donde necesites.</p>
+            <span class="hst-tag">📍 Lo antes posible</span>
+          </div>
+        </div>
+
+        <div class="hst-v2">
+          <div class="hst-v2-num">04</div>
+          <div class="hst-v2-icon">♻️</div>
+          <div class="hst-v2-body">
+            <h4>La retiramos</h4>
+            <p>Cuando terminás, avisás y la buscamos. Nos encargamos de la disposición correcta con respaldo DINAMA.</p>
+            <span class="hst-tag">🌿 Disposición certificada</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="how-cta">
+        <a href="https://wa.me/59891626226" target="_blank" class="btn btn-wa">
+          💬 Soy empresa — quiero coordinar
+        </a>
+        <a href="tel:23035246" class="btn btn-outline" style="margin-left:12px">
+          📞 Necesito una volqueta hoy
+        </a>
+      </div>
+
+      <div class="how-faq-block">
+        <span class="chip">Dudas frecuentes</span>
+        <h3 style="color:#fff; font-size:1.8rem; margin-bottom:24px">Preguntas frecuentes</h3>
+        <div class="faq-box">
+
+          <div class="fq" onclick="this.classList.toggle('open')">
+            <div class="fq-q">¿Qué necesita mi empresa para encargar una volqueta? <span class="fq-arr">▼</span></div>
+            <div class="fq-a">Toda empresa u organización necesita realizar los <button onclick="show('servicios')" style="color:#f0b400;background:none;border:none;cursor:pointer;font-family:inherit;font-size:inherit;padding:0">trámites correspondientes</button> en la intendencia. Nosotros te asesoramos en el proceso.</div>
+          </div>
+
+          <div class="fq" onclick="this.classList.toggle('open')">
+            <div class="fq-q">¿Las 48 hs empiezan a correr a partir de la entrega? <span class="fq-arr">▼</span></div>
+            <div class="fq-a">Sí, el plazo empieza a contar desde el momento en que entregamos la volqueta. Si necesitás más tiempo, avisanos con anticipación para coordinar la extensión sin problema.</div>
+          </div>
+
+          <div class="fq" onclick="this.classList.toggle('open')">
+            <div class="fq-q">¿Puedo poner la volqueta en la calle frente a mi casa? <span class="fq-arr">▼</span></div>
+            <div class="fq-a">Si sos particular en predio propio, no se requiere permiso. Para obras comerciales o industriales que ocupen vereda o calzada pública sí se necesita permiso de la IDM — nosotros te asesoramos para gestionarlo.</div>
+          </div>
+
+          <div class="fq" onclick="this.classList.toggle('open')">
+            <div class="fq-q">¿Qué materiales NO se pueden tirar? <span class="fq-arr">▼</span></div>
+            <div class="fq-a">No se admiten líquidos, materiales peligrosos, tóxicos, inflamables, residuos hospitalarios ni electrónicos. Para materiales especiales, consultanos antes de cargar.</div>
+          </div>
+
+          <div class="fq" onclick="this.classList.toggle('open')">
+            <div class="fq-q">¿Tienen servicio en todo Maldonado? <span class="fq-arr">▼</span></div>
+            <div class="fq-a">Sí, cubrimos Maldonado ciudad, Punta del Este, San Carlos, Piriápolis y otras zonas cercanas. Revisá el <button onclick="show('cobertura')" style="color:#f0b400;background:none;border:none;cursor:pointer;font-family:inherit;font-size:inherit;padding:0">mapa de cobertura</button> o consultanos directamente.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sec-cta">
+    <div class="wrap">
+      <h3>¿Necesitás una volqueta?</h3>
+      <p>El proceso es simple y rápido. En minutos coordinamos la entrega.</p>
+      <div class="cta-row">
+        <a href="https://wa.me/59891626226" target="_blank" class="btn btn-wa">💬 Escribir por WhatsApp</a>
+        <a href="tel:23035246" class="btn btn-white">📞 Llamar ahora</a>
+      </div>
+    </div>
+  </div>
+  <div class="pg-ft">© 2025 Volcast. Todos los derechos reservados.</div>
+</section>
+
+<!-- COBERTURA -->
+<section class="psec" id="sec-cobertura">
+  <div class="cov-pg">
+    <div class="wrap">
+      <span class="chip">Dónde llegamos</span>
+      <h2 class="sec-title">Área de Cobertura</h2>
+      <p class="sec-sub">Servicio en todo Maldonado y zonas cercanas. Usá el mapa para verificar tu ubicación.</p>
+      <div class="cov-lay">
+        <div class="map-box">
+          <iframe src="https://www.google.com/maps?q=Maldonado,+Uruguay&output=embed" width="640" height="480" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa cobertura Volcast Maldonado"></iframe>
+        </div>
+        <div class="cov-inf">
+          <h3>¿Llegamos a tu zona?</h3>
+          <div class="cz"><div class="cz-d p"></div>
+            <div>
+              <strong>Maldonado - zona urbana</strong>
+              <span>Disponible sin costo adicional.</span>
+            </div>
+          </div>
+          <div class="cz">
+            <div class="cz-d p"></div>
+            <div>
+              <strong>Punta del Este, San Carlos y Piriápolis</strong>
+              <span>Disponible con costo adicional según distancia.</span>
+            </div>
+          </div>
+          <div class="cz">
+            <div class="cz-d s"></div>
+            <div>
+              <strong>Balnearios y zonas rurales de Maldonado</strong>
+              <span>Disponible con costo adicional según acceso.</span>
+            </div>
+          </div>
+          <div class="cz">
+            <div class="cz-d t"></div>
+            <div>
+              <strong>Fuera de Maldonado</strong>
+              <span>Consultanos. Evaluamos disponibilidad sin compromiso.</span>
+            </div>
+          </div>
+          <div style="margin-top:20px">
+            <a href="https://wa.me/59891626226" target="_blank" class="btn btn-primary">💬 Consultar mi zona</a>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:50px">
+        <span class="chip">Antes de usar la volqueta</span>
+        <h3 class="sec-title">Recomendaciones de uso</h3>
+        <div class="tips-g">
+          <div class="tip">
+            <div class="tip-n">1</div>
+            <div>
+              <h5>Carga segura</h5>
+              <p>No sobrecargar ni superar los bordes. Distribuí el material de forma pareja para evitar derrames.</p>
+            </div>
+          </div>
+          <div class="tip">
+            <div class="tip-n">2</div>
+            <div>
+              <h5>Coordinar el retiro</h5>
+              <p>Avisános con anticipación cuando estés listo y garantizamos el turno más conveniente.</p>
+            </div>
+          </div>
+          <div class="tip">
+            <div class="tip-n">3</div>
+            <div>
+              <h5>Residuos permitidos</h5>
+              <p>No se admiten líquidos, peligrosos ni inflamables. Consultános ante cualquier duda.</p>
+            </div>
+          </div>
+          <div class="tip">
+            <div class="tip-n">4</div>
+            <div>
+              <h5>Permiso en vía pública</h5>
+              <p>Si la volqueta va en la vereda o calzada, tramitá el permiso IDM antes de la entrega.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sec-cta"><div class="wrap"><h3>¿Ya sabés que llegamos a tu zona?</h3><p>Pedí tu volqueta ahora y la tenés hoy.</p><div class="cta-row"><a href="https://wa.me/59891626226" target="_blank" class="btn btn-wa">💬 Pedir mi volqueta</a><button onclick="show('servicios')" class="btn btn-white">Ver precios →</button></div></div></div>
+  <div class="pg-ft">© 2025 Volcast. Todos los derechos reservados.</div>
+</section>
+
+<!-- NOSOTROS -->
+<section class="psec" id="sec-nosotros">
+  <div class="nos-pg">
+    <!-- HERO NOSOTROS — FULL WIDTH -->
+    <div class="nos-hero-strip">
+      <div class="nos-hero-text">
+        <span class="chip">La empresa</span>
+        <h2 class="sec-title" style="color:#fff;margin-bottom:16px">Nosotros</h2>
+        <p style="font-size:1.05rem;color:rgba(255,255,255,.78);line-height:1.75;max-width:500px">Empresa uruguaya con más de 10 años de trayectoria. Nacimos con una convicción simple: el cliente merece rapidez, honestidad y cero complicaciones.</p>
+        <div class="nos-kpis">
+          <div class="nos-kpi"><span class="nos-kpi-n">300+</span><span class="nos-kpi-l">Volquetas</span></div>
+          <div class="nos-kpi"><span class="nos-kpi-n">10+</span><span class="nos-kpi-l">Vehículos</span></div>
+          <div class="nos-kpi"><span class="nos-kpi-n">10+</span><span class="nos-kpi-l">Años</span></div>
+        </div>
+      </div>
+      <div class="nos-hero-img">
+        <img src="img/camiones/c1.jpg" alt="Camión Volcast" onerror="this.parentElement.style.background='var(--bd)'">
+      </div>
+    </div>
+
+    <!-- MISIÓN + VISIÓN — FULL WIDTH -->
+    <div class="mvv-row">
+      <div class="mvv-block mvv-block-mission">
+        <div class="mvv-block-icon">🎯</div>
+        <div class="mvv-block-label">Misión</div>
+        <h3>Ser el aliado que no falla</h3>
+        <p>En Volcast entendemos que una obra no puede esperar. Desde Maldonado, somos el proveedor que llega a tiempo, cumple lo que promete y gestiona los residuos de forma correcta. Que nuestros clientes se enfoquen en construir — de lo demás nos ocupamos nosotros.</p>
+      </div>
+      <div class="mvv-block mvv-block-vision">
+        <div class="mvv-block-icon">🌟</div>
+        <div class="mvv-block-label">Visión</div>
+        <h3>Líderes en todo el Uruguay</h3>
+        <p>Consolidarnos como la empresa referente en alquiler de volquetas a nivel nacional. Crecer con la misma filosofía que nos trajo hasta acá: excelencia operativa, precios transparentes y un impacto ambiental responsable en cada trabajo que hacemos.</p>
+      </div>
+    </div>
+
+    <!-- VALORES -->
+    <div class="wrap">
+      <div class="val-section"><div class="wrap">
+        <div class="val-section-header">
+          <h3>Nuestros valores</h3>
+          <p>Los principios que guían cada decisión, cada entrega y cada llamado.</p>
+        </div>
+        <div class="val-grid">
+          <div class="vi">
+            <div class="vi-ico">⚡</div>
+            <div>
+              <strong>Rapidez y puntualidad</strong>
+              <p>En una obra, el tiempo es dinero. Respondemos en minutos.</p>
+            </div>
+          </div>
+          <div class="vi">
+            <div class="vi-ico">🤝</div>
+            <div>
+              <strong>Transparencia total</strong>
+              <p>El precio que cotizamos es el que pagás. Sin cargos ocultos, sin letra chica.</p>
+            </div>
+          </div>
+          <div class="vi">
+            <div class="vi-ico">🌱</div>
+            <div>
+              <strong>Responsabilidad ambiental</strong>
+              <p>Gestionamos cada residuo correctamente, cumpliendo toda la normativa vigente.</p>
+            </div>
+          </div>
+          <div class="vi">
+            <div class="vi-ico">🏆</div>
+            <div>
+              <strong>Excelencia operativa</strong>
+              <p>Flota propia, choferes capacitados y procesos claros en cada servicio.</p>
+            </div>
+          </div>
+          <div class="vi">
+            <div class="vi-ico">🔐</div>
+            <div>
+              <strong>Legalidad garantizada</strong>
+              <p>IDM y DINACEA al día. Contratás con total respaldo legal.</p>
+            </div>
+          </div>
+          <div class="vi">
+            <div class="vi-ico">❤️</div>
+            <div>
+              <strong>Compromiso con Uruguay</strong>
+              <p>Empresa uruguaya que apoya el deporte, la cultura y el trabajo local.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>       
+
+      <!-- PERMISOS MUNICIPALES -->
+      <div style="margin-top:56px;padding-top:46px;border-top:2px solid var(--gl)">
+        <span class="chip">Habilitaciones oficiales</span>
+        <h3 class="sec-title">Permisos municipales</h3>
+        <p style="color:var(--gd);font-size:.92rem;margin-bottom:28px">Contamos con los permisos municipales correspondientes para operar con total legalidad en Uruguay:</p>
+        <div class="perm-grid">
+          <div class="perm-card">
+            <div class="perm-logo-box">
+                  <img src="./img/habilitaciones/montevideo.png"
+                    alt="Intendencia de Maldonado" onerror="this.style.display='none';this.nextSibling.style.display='flex'">
+              <div class="perm-logo-fallback" style="display:none">
+                <span style="font-size:2rem">🏛️</span>
+                <strong>Intendencia<br>de Maldonado</strong>
+              </div>
+            </div>
+            <div class="perm-label">
+              <strong>Habilitación IDM</strong>
+              <span>Intendencia de Maldonado</span>
+            </div>
+          </div>
+          <div class="perm-card">
+            <div class="perm-logo-box" style="background:#f0f7f0">
+              <img src="./img/habilitaciones/canelones.png"
+                   alt="Permiso departamental de Maldonado" onerror="this.style.display='none';this.nextSibling.style.display='flex'">
+              <div class="perm-logo-fallback" style="display:none">
+                <span style="font-size:2rem">🌿</span>
+                <strong>Permiso<br>Departamental</strong>
+              </div>
+            </div>
+            <div class="perm-label">
+              <strong>Permiso de ocupación de vía pública</strong>
+              <span>Intendencia de Maldonado</span>
+            </div>
+          </div>
+          <div class="perm-card">
+            <div class="perm-logo-box" style="background:#f5f7f0">
+              <img src="./img/habilitaciones/dinama.png"
+                   alt="MVOTMA" onerror="this.style.display='none';this.nextSibling.style.display='flex'">
+              <div class="perm-logo-fallback" style="display:none">
+                <span style="font-size:2rem">🌍</span>
+                <strong>MVOTMA</strong>
+              </div>
+            </div>
+            <div class="perm-label">
+              <strong>Habilitación DINAMA R/DINACEA/030/25</strong>
+              <span>Min. Vivienda, Ord. Territorial y Medio Ambiente</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:56px;padding-top:46px;border-top:2px solid var(--gl)">
+        <h3 class="sec-title">Nuestro equipo</h3>
+        <div class="team-g">
+          <div class="tc"><div class="tc-p" style="background-image:url('img/empleados/Alexis.jpeg')"></div><div class="tc-i"><strong>Alexis Castro</strong><span>CEO</span></div></div>
+          <div class="tc"><div class="tc-p" style="background-image:url('img/empleados/Patricia.jpeg')"></div><div class="tc-i"><strong>Q.F. Patricia Estévez</strong><span>CEO</span></div></div>
+          <div class="tc"><div class="tc-p" style="background-image:url('img/empleados/Jorge.jpeg')"></div><div class="tc-i"><strong>Jorge Igarzabal</strong><span>Operaciones</span></div></div>
+          <div class="tc"><div class="tc-p" style="background-image:url('img/empleados/Victoria.jpeg')"></div><div class="tc-i"><strong>Victoria Castro</strong><span>Administrativa</span></div></div>
+          <div class="tc"><div class="tc-p" style="background-image:url('img/empleados/Maria.jpeg')"></div><div class="tc-i"><strong>Maria Bernardet</strong><span>Administrativa</span></div></div>
+          <div class="tc"><div class="tc-p" style="background-image:url('img/empleados/Gastón.jpeg')"></div><div class="tc-i"><strong>Gastón Acosta</strong><span>Administrativo</span></div></div>
+          <div class="tc"><div class="tc-p" style="background-image:url('img/empleados/OrianaCastro.jpg')"></div><div class="tc-i"><strong>Oriana Castro</strong><span>Técnica</span></div></div>
+        </div>
+      </div>
+      <div style="margin-top:56px;padding-top:46px;padding-bottom:52px;border-top:2px solid var(--gl)">
+        <h3 class="sec-title">Volcast en Maldonado</h3>
+        <p style="color:var(--gd);font-size:.92rem;margin-bottom:22px">Apoyamos el deporte uruguayo</p>
+        <div class="sp-g">
+          <div class="spcard"><img src="img/sponsor/sponsor5.jpg" alt="Fórmula 2 Argentina"/><div class="sp-ov"><span>Fórmula 2 argentina</span></div></div>
+          <div class="spcard"><img src="img/sponsor/sponsor1.jpg" alt="Superturismo"/><div class="sp-ov"><span>Superturismo uruguayo</span></div></div>
+          <div class="spcard"><img src="img/sponsor/sponsor2.jpg" alt="Turismo Libre"/><div class="sp-ov"><span>Turismo libre uruguayo</span></div></div>
+          <div class="spcard"><img src="img/sponsor/sponsor3.jpg" alt="Superturismo"/><div class="sp-ov"><span>Superturismo uruguayo</span></div></div>
+          <div class="spcard"><img src="img/sponsor/sponsor4.jpg" alt="Fútbol"/><div class="sp-ov"><span>Fútbol uruguayo</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="mq-bar">
+    <div class="mq-lbl">Empresas que confían en Volcast</div>
+    <div class="mq-wrap" id="mqWrap">
+      <div class="mq-track" id="mqTrack">
+        <span class="m-item"><span class="m-name">Triex</span></span>
+        <span class="m-item"><span class="m-name">Frig. Carrasco</span></span>
+        <span class="m-item"><span class="m-name">Frig. Clay</span></span>
+        <span class="m-item"><span class="m-name">CIEMSA</span></span>
+        <span class="m-item"><span class="m-name">ORT Uruguay</span></span>
+        <span class="m-item"><span class="m-name">Starbucks</span></span>
+        <span class="m-item"><span class="m-name">Triex</span></span>
+        <span class="m-item"><span class="m-name">Frig. Carrasco</span></span>
+        <span class="m-item"><span class="m-name">Frig. Clay</span></span>
+        <span class="m-item"><span class="m-name">CIEMSA</span></span>
+        <span class="m-item"><span class="m-name">ORT Uruguay</span></span>
+        <span class="m-item"><span class="m-name">Starbucks</span></span>
+        <span class="m-item"><span class="m-name">Triex</span></span>
+        <span class="m-item"><span class="m-name">Frig. Carrasco</span></span>
+        <span class="m-item"><span class="m-name">Frig. Clay</span></span>
+        <span class="m-item"><span class="m-name">CIEMSA</span></span>
+        <span class="m-item"><span class="m-name">ORT Uruguay</span></span>
+        <span class="m-item"><span class="m-name">Starbucks</span></span>
+      </div>
+    </div>
+  </div> -->
+
+    </div><!-- /wrap end before ext-srv -->
+      <!-- MÁS SERVICIOS / EMPRESAS RELACIONADAS -->
+      <div class="ext-srv-section">
+        <div class="wrap">
+        <span class="chip">Grupo empresarial</span>
+        <h3 class="sec-title">Más servicios</h3>
+        <p style="color:var(--gd);font-size:.92rem">Además de Volcast, el grupo opera otras empresas especializadas:</p>
+        <div class="ext-srv-list">
+          <div class="ext-srv-item">
+            <div class="ext-srv-info">
+              <h4>Volquetas del Este</h4>
+              <p>Servicio de alquiler de volquetas en la zona este del país. Misma calidad y compromiso de Volcast, ahora disponible en más localidades del Uruguay.</p>
+              <span class="ext-badge">Próximamente disponible</span>
+            </div>
+            <div class="ext-srv-logo">
+              <img src="img/logos/volquetasDelEste.png" alt="Volquetas del Este"/>
+            </div>
+          </div>
+          <div class="ext-srv-item">
+            <div class="ext-srv-info">
+              <h4>Barométrica LAN</h4>
+              <p>Empresa especializada en servicios logísticos y de transporte. Soluciones a medida para empresas que requieren cadenas de distribución eficientes.</p>
+              <span class="ext-badge">Próximamente disponible</span>
+            </div>
+            <div class="ext-srv-logo">
+              <img src="img/logos/lan.png" alt="Barométrica LAN"/>
+            </div>
+          </div>
+          <div class="ext-srv-item">
+            <div class="ext-srv-info">
+              <h4>Transportes Castro</h4>
+              <p>Servicio de transporte tercerizado especializado en distribución de garrafas de gas, volquetas y servicio de barométrica, entre otros. Cobertura en Maldonado e interior con flota propia y personal capacitado.</p>
+              <span class="ext-badge">Próximamente disponible</span>
+            </div>
+            <div class="ext-srv-logo" style="background:#f5f5f5;border-radius:8px;padding:12px">
+              <span style="font-size:2.5rem">🔧</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    </div><!-- /wrap -->
+  <div class="sec-cta"><div class="wrap"><h3>Trabajá con un equipo de confianza</h3><p>10 años de experiencia. 300+ volquetas. Habilitaciones al día.</p><div class="cta-row"><a href="https://wa.me/59891626226" target="_blank" class="btn btn-wa">💬 Contactar ahora</a><button onclick="show('contacto')" class="btn btn-white">Formulario de contacto</button></div></div></div>
+  <div class="pg-ft">© 2025 Volcast. Todos los derechos reservados.</div>
+</section>
+
+<!-- CONTACTO -->
+<section class="psec" id="sec-contacto">
+  <div class="con-pg">
+    <div class="wrap">
+      <span class="chip">Hablemos de tu proyecto</span>
+      <h2 class="sec-title">Contacto</h2>
+      <p class="sec-sub">¿Necesitás una volqueta o tenés alguna consulta? Estamos para ayudarte.</p>
+      <div class="con-lay">
+        <div>
+          <h3 style="font-size:1.52rem;color:var(--bd);margin-bottom:15px">Estamos para ayudarte</h3>
+          <div class="ci"><div class="ci-i">📞</div><div><strong>Teléfono fijo</strong><a href="tel:23035246">2303 5246</a></div></div>
+          <div class="ci"><div class="ci-i">💬</div><div><strong>WhatsApp</strong><a href="https://wa.me/59891626226" target="_blank">091 62 62 26</a></div></div>
+          <div class="ci"><div class="ci-i">✉️</div><div><strong>Email</strong>
+            <a href="mailto:volcast31@transportescastro.com.uy">volcast31@transportescastro.com.uy</a>
+            <a href="mailto:comercial@transportescastro.com.uy">comercial@transportescastro.com.uy</a>
+          </div></div>
+          <div class="ci"><div class="ci-i">⏰</div><div><strong>Horario</strong><span class="ci-v">Lunes a Viernes, 7:30–17:30</span></div></div>
+          <div class="ci"><div class="ci-i">📍</div><div><strong>Cobertura</strong><span class="ci-v">Maldonado y zonas cercanas</span></div></div>
+          <div class="wa-bx">
+            <p>La forma más rápida de coordinar es por <strong>WhatsApp</strong>. Respondemos en minutos durante el horario de atención.</p>
+            <a href="https://wa.me/59891626226" target="_blank" class="btn btn-wa">💬 Abrir WhatsApp ahora</a>
+          </div>
+        </div>
+        <div class="fmc">
+          <h3>Dejanos tu mensaje</h3>
+          <p class="fd">Completá el formulario y te contactamos a la brevedad.</p>
+          <form id="cform" novalidate action="https://formspree.io/f/xeerkepg" method="POST">
+            <!-- TIPO DE CLIENTE -->
+            <div class="fg" id="group-tipo-cliente">
+              <label class="form-label">Tipo de cliente *</label>
+              <div class="tipo-cliente-btns">
+                <button type="button" class="tipo-btn" onclick="seleccionarTipo(this, 'Particular')">Particular</button>
+                <button type="button" class="tipo-btn activo" onclick="seleccionarTipo(this, 'Empresa')">Empresa</button>
+                <button type="button" class="tipo-btn" onclick="seleccionarTipo(this, 'Constructora')">Constructora</button>
+                <button type="button" class="tipo-btn" onclick="seleccionarTipo(this, 'Otro')">Otro</button>
+              </div>
+              <input type="hidden" name="tipo_cliente" id="tipo_cliente" value="empresa" required/>
+            </div>
+            <div class="frow">
+              <div class="fg">
+                <label name="nombre">Nombre *</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required/>
+              </div>
+              <div class="fg">
+                <label name="tel">Teléfono *</label>
+                <input type="tel" id="tel" name="telefono" placeholder="09x xxx xxx" required/>
+              </div>
+            </div>
+            <div class="fg">
+              <label name="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="tu@email.com" required/>
+            </div>
+            <div class="fg">
+              <label name="srv">¿Qué necesitás?</label>
+              <select id="srv" name="servicio">
+                <option value="">Selecioná una opción</option>
+                <option>Volqueta pequeña (2 m³)</option>
+                <option>Volqueta mediana (6 m³)</option>
+                <option>Volqueta grande (10 m³)</option>
+                <option>No sé qué tamaño necesito</option>
+                <option>Consulta sobre permisos IDM</option>
+                <option>Otro / Consulta general</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label for="msg">Mensaje</label>
+              <textarea id="msg" name="mensaje" placeholder="Contános sobre tu proyecto, dirección aproximada o cualquier consulta..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary f-sub">Enviar mensaje →</button>
+            <p class="f-nt">📞 También podés llamarnos al 2303 5246</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-ft">© 2025 Volcast. Todos los derechos reservados.</div>
+</section>
+
+<!-- FLOATING WA -->
+<div class="wa-fl">
+  <div class="wa-tip">¡Escribínos! Respondemos rápido 💬</div>
+  <a href="https://wa.me/59891626226" target="_blank" class="wa-btn" aria-label="WhatsApp">💬</a>
+</div>
+
+<!-- TOAST -->
+<div class="toast-msg" id="tmsg"></div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
