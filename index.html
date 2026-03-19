@@ -37,12 +37,17 @@
 <nav class="navbar">
   <div class="wrap">
     <button class="nav-brand" onclick="show('inicio')">
-      <div class="nav-brand-icon">
-        <svg viewBox="0 0 24 24"><path d="M1 3h15l5 5v10H1zM6 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM18 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/><path d="M16 3v5h5"/></svg>
-      </div>
-      <div class="nav-brand-text">
-        <div class="nav-brand-name">VOLQUETAS <span>DEL ESTE</span></div>
-        <div class="nav-brand-sub">Maldonado, Uruguay</div>
+      <img src="img/logos/volquetasDelEste.png" alt="Volquetas del Este" class="nav-logo-img"
+           onerror="this.style.display='none';this.nextSibling.style.display='flex'">
+      <!-- Fallback si no carga la imagen -->
+      <div style="display:none;align-items:center;gap:10px">
+        <div style="width:36px;height:36px;background:var(--r);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+          <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:none;stroke:#fff;stroke-width:2.2;stroke-linecap:round"><path d="M1 3h15l5 5v10H1zM6 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM18 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
+        </div>
+        <div style="display:flex;flex-direction:column;line-height:1">
+          <span style="font-family:'Anton',sans-serif;font-size:1.2rem;color:var(--blk);letter-spacing:.04em">VOLQUETAS <span style="color:var(--r)">DEL ESTE</span></span>
+          <span style="font-size:.6rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--g3);margin-top:2px">Maldonado, Uruguay</span>
+        </div>
       </div>
     </button>
     <ul class="ntabs">
@@ -51,6 +56,7 @@
       <li><button class="ntb" onclick="show('como')">¿Cómo funciona?</button></li>
       <li><button class="ntb" onclick="show('cobertura')">Cobertura</button></li>
       <li><button class="ntb" onclick="show('nosotros')">Nosotros</button></li>
+      <li><button class="ntb" onclick="show('contacto')">Contacto</button></li>
       <li><a href="https://wa.me/59891626226" target="_blank" class="ntb ntb-cta">💬 Pedir ahora</a></li>
     </ul>
     <button class="ham" id="ham" aria-label="Menú"><span></span><span></span><span></span></button>
@@ -711,8 +717,8 @@
               <div>
                 <div class="ci-label">Email</div>
                 <div class="ci-value">
-                  <a href="mailto:volcast31@transportescastro.com.uy">volcast31@transportescastro.com.uy</a>
-                  <a href="mailto:comercial@transportescastro.com.uy">comercial@transportescastro.com.uy</a>
+                  <a href="/cdn-cgi/l/email-protection#9ceaf3f0fffdefe8afaddce8eefdf2efecf3eee8f9effffdefe8eef3b2fff3f1b2e9e5"><span class="__cf_email__" data-cfemail="e4928b8887859790d7d5a49096858a97948b9690819787859790968bca878b89ca919d">[email&#160;protected]</span></a>
+                  <a href="/cdn-cgi/l/email-protection#61020e0c04130208000d211513000f12110e1315041202001215130e4f020e0c4f1418"><span class="__cf_email__" data-cfemail="01626e6c64736268606d417573606f72716e7375647262607275736e2f626e6c2f7478">[email&#160;protected]</span></a>
                 </div>
               </div>
             </div>
@@ -781,6 +787,7 @@
   </div>
   <div class="pg-ft">© 2025 Volquetas del Este · Todos los derechos reservados.</div>
 </section>
+
 
 
 <!-- FLOATING WA -->
