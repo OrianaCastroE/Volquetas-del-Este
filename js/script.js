@@ -1,145 +1,167 @@
-﻿// ── NAVEGACIÓN — mostrar sección y cerrar menú móvil ──────────
-function show(id){
-  document.querySelectorAll('.psec').forEach(function(s){s.classList.remove('active')});
-  document.querySelectorAll('.ntb').forEach(function(b){b.classList.remove('active')});
-  var s=document.getElementById('sec-'+id);
-  if(s)s.classList.add('active');
+/* ── NAVEGACIÓN ─────────────────────────────────────────────── */
+function show(id) {
+  document.querySelectorAll('.psec').forEach(function(s){ s.classList.remove('active'); });
+  document.querySelectorAll('.ntb').forEach(function(b){ b.classList.remove('active'); });
+
+  var s = document.getElementById('sec-' + id);
+  if (s) s.classList.add('active');
+
   document.querySelectorAll('.ntb').forEach(function(b){
-    if(b.getAttribute('onclick')==="show('"+id+"')")b.classList.add('active');
+    if (b.getAttribute('onclick') === "show('" + id + "')") b.classList.add('active');
   });
-  document.getElementById('mobNav').classList.remove('open');
-  window.scrollTo({top:0,behavior:'smooth'});
-  if(id==='contacto')contactForm();
-  if(id==='inicio')animatedNumbers();
+
+  var mob = document.getElementById('mobNav');
+  if (mob) mob.classList.remove('open');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  if (id === 'inicio')   { animNums(); startTimer(); }
+  if (id === 'contacto') { initForm(); }
 }
-document.getElementById('ham').addEventListener('click',function(){
+
+/* ── HAMBURGUESA ─────────────────────────────────────────────── */
+document.getElementById('ham').addEventListener('click', function(){
   document.getElementById('mobNav').classList.toggle('open');
 });
 
-function animatedNumbers(){
-  document.querySelectorAll('.hs-n[data-t]').forEach(
-    function(el){
-      var t = parseInt(el.dataset.t),sf=el.dataset.s||'',c=0,step=Math.ceil(t/40);
-      var tmr = setInterval(
-        function(){
-          c=Math.min(c+step,t);
-          el.textContent = c + sf;
-          if(c>=t){
-            clearInterval(tmr);
-          }
-        },35);
-    }
-  );
+/* ── NÚMEROS ANIMADOS ────────────────────────────────────────── */
+function animNums() {
+  document.querySelectorAll('.hm-n[data-t]').forEach(function(el){
+    var t    = parseInt(el.dataset.t);
+    var sf   = el.dataset.s || '';
+    var c    = 0;
+    var step = Math.ceil(t / 40);
+    var tmr  = setInterval(function(){
+      c = Math.min(c + step, t);
+      el.textContent = c + sf;
+      if (c >= t) clearInterval(tmr);
+    }, 30);
+  });
 }
-animatedNumbers();
-document.getElementById('cform').addEventListener('submit',function(e){
-document.getElementById('cform').addEventListener('submit', async function(e){
-  e.preventDefault();
-  this.reset();
+animNums();
+
+/* ── LIVE BADGE ──────────────────────────────────────────────── */
+(function(){
+  var badge = document.getElementById('liveBadge');
+  if (!badge) return;
+  var h = new Date().getHours();
+  var open = h >= 7 && h < 18;
+  if (open) {
+    badge.innerHTML = '<div class="hero-dot"></div>Servicio disponible ahora';
+  } else {
+    badge.innerHTML = '<div class="hero-dot-off"></div>Oficinas cerradas — dejanos tu mensaje';
+    badge.style.opacity = '.55';
+  }
+})();
+
+/* ── URGENCY TIMER ───────────────────────────────────────────── */
+function startTimer() {
+  var timerEl = document.getElementById('ubTimer');
+  if (!timerEl) return;
+
+  // Count down to end of business day (17:30), or 2h if outside hours
+  var now  = new Date();
+  var end  = new Date(now);
+  end.setHours(17, 30, 0, 0);
+  if (now >= end) {
+    end.setDate(end.getDate() + 1);
+    end.setHours(9, 0, 0, 0);
+  }
+
+  function tick() {
+    var diff = Math.max(0, end - new Date());
+    var h    = Math.floor(diff / 3600000);
+    var m    = Math.floor((diff % 3600000) / 60000);
+    var ss   = Math.floor((diff % 60000) / 1000);
+    timerEl.textContent =
+      String(h).padStart(2,'0') + ':' +
+      String(m).padStart(2,'0') + ':' +
+      String(ss).padStart(2,'0');
+  }
+  tick();
+  setInterval(tick, 1000);
+}
+startTimer();
+
+/* ── HERO CARD: selección de volqueta ───────────────────────── */
+document.querySelectorAll('.hc-opt').forEach(function(opt){
+  opt.addEventListener('click', function(){
+    document.querySelectorAll('.hc-opt').forEach(function(o){ o.classList.remove('selected'); });
+    this.classList.add('selected');
+  });
 });
+// Seleccionar primera por defecto
+var firstOpt = document.querySelector('.hc-opt');
+if (firstOpt) firstOpt.classList.add('selected');
+
+/* ── FAQ ACCORDEON ───────────────────────────────────────────── */
+document.querySelectorAll('.fq').forEach(function(fq){
+  fq.addEventListener('click', function(){
+    var isOpen = this.classList.contains('open');
+    document.querySelectorAll('.fq').forEach(function(f){ f.classList.remove('open'); });
+    if (!isOpen) this.classList.add('open');
+  });
 });
 
-// ── CONTACT FORM — validación y envío con Formspree ──────────
-function contactForm(){
+/* ── TIPO CLIENTE ────────────────────────────────────────────── */
+function setTipo(btn, tipo) {
+  document.querySelectorAll('.tipo-btn').forEach(function(b){ b.classList.remove('on'); });
+  btn.classList.add('on');
+  document.getElementById('tipo_cliente').value = tipo;
+}
+
+/* ── TOAST ───────────────────────────────────────────────────── */
+function toast(msg, ok) {
+  var el = document.getElementById('toastEl');
+  el.textContent = msg;
+  el.style.borderLeftColor = ok ? '#22c55e' : '#D91A1A';
+  el.classList.add('show');
+  setTimeout(function(){ el.classList.remove('show'); }, 4000);
+}
+
+/* ── FORMULARIO ──────────────────────────────────────────────── */
+function initForm() {
   var form = document.getElementById('cform');
-  if(!form || form.dataset.bound === '1') return;
+  if (!form || form.dataset.bound === '1') return;
   form.dataset.bound = '1';
 
   form.addEventListener('submit', async function(e){
-  e.preventDefault();
+    e.preventDefault();
+    var n = document.getElementById('nombre').value.trim();
+    var t = document.getElementById('tel').value.trim();
 
-  var n = document.getElementById('nombre').value.trim();
-  var t = document.getElementById('tel').value.trim();
-
-  if(!n || !t){
-    toast('Completá al menos tu nombre y teléfono.', '#78350f', '#fffbeb');
-    return;
-  }
-
-  if(!/^09\d{7}$/.test(t.replace(/\s/g, ''))){
-    toast('El teléfono debe empezar con 09 y tener 9 dígitos.', '#78350f', '#fffbeb');
-    return;
-  }
-
-  const btn = this.querySelector('button[type="submit"]');
-  btn.disabled = true;
-  btn.textContent = 'Enviando...';
-
-  const formData = new FormData(this);
-
-  try {
-    const res = await fetch('https://formspree.io/f/xeerkepg', {
-      method: 'POST',
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    });
-
-    if(res.ok){
-      toast('✅ ¡Mensaje enviado! Te contactamos pronto.', '#166534', '#f0fdf4');
-      this.reset();
-    } else {
-      toast('❌ Error al enviar. Intentá por WhatsApp.', '#7f1d1d', '#fef2f2');
+    if (!n || !t) {
+      toast('Completá al menos tu nombre y teléfono.', false);
+      return;
     }
-  } catch(err){
-    toast('❌ Error al enviar. Intentá por WhatsApp.', '#7f1d1d', '#fef2f2');
-  } finally {
-    btn.disabled = false;
-    btn.textContent = 'Enviar mensaje →';
-  }
-});}
+    if (!/^09\d{7}$/.test(t.replace(/\s/g,''))) {
+      toast('El teléfono debe empezar con 09 y tener 9 dígitos.', false);
+      return;
+    }
 
-contactForm();
+    var btn = this.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Enviando...';
 
-// ── TOASTS — mensajes temporales para feedback al usuario ──────────
-function toast(msg,color,bg){
-  var el=document.getElementById('tmsg');
-  el.textContent=msg;el.style.background=bg;el.style.color=color;
-  el.classList.add('show');setTimeout(function(){el.classList.remove('show');},3800);
+    try {
+      var res = await fetch('https://formspree.io/f/xeerkepg', {
+        method: 'POST',
+        body: new FormData(this),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        toast('✅ ¡Mensaje enviado! Te contactamos a la brevedad.', true);
+        this.reset();
+        document.querySelectorAll('.tipo-btn').forEach(function(b){ b.classList.remove('on'); });
+        document.querySelector('.tipo-btn[data-tipo="Empresa"]').classList.add('on');
+      } else {
+        toast('❌ Error al enviar. Probá por WhatsApp.', false);
+      }
+    } catch(err) {
+      toast('❌ Error al enviar. Probá por WhatsApp.', false);
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Enviar consulta →';
+    }
+  });
 }
-
-// ── MARQUEE — animación continua para logos de marcas ──────────
-/*
-(function(){
-  var track = document.getElementById('mqTrack');
-  if(!track) return;
-  var pos = 0;
-  var speed = 0.6; // px per frame
-  function step(){
-    pos -= speed;
-    // When first half scrolled away, reset to start seamlessly
-    var half = track.scrollWidth / 2;
-    if(Math.abs(pos) >= half) pos = 0;
-    track.style.transform = 'translateX(' + pos + 'px)';
-    requestAnimationFrame(step);
-  }
-  requestAnimationFrame(step);
-})();
-*/
-
-// ── LIVE BADGE — disponible solo 8:00 a 18:00 ──────────
-(function(){
-  var badge = document.querySelector('.live-badge');
-  var dot = document.querySelector('.ldot');
-  if(!badge) return;
-
-  var hora = new Date().getHours();
-  var disponible = hora >= 7.5 && hora < 18;
-
-  if(disponible){
-    badge.innerHTML = '<div class="ldot"></div>Servicio disponible ahora';
-    dot.style.background = '#4ade80'; // verde
-  } else {
-    badge.innerHTML = '<div class="ldot ldot-off"></div>Oficinas cerradas, dejanos tu mensaje.';
-    badge.style.opacity = '0.6';
-  }
-})();
-
-/* tipo de cliente: particular o empresa, con campos dinámicos */
-function seleccionarTipo(btn, tipo) {
-  // Actualiza botones
-  document.querySelectorAll('.tipo-btn').forEach(b => b.classList.remove('activo'));
-  btn.classList.add('activo');
-
-  // Guarda el valor en el input oculto
-  document.getElementById('tipo_cliente').value = tipo;
-}
+initForm();
