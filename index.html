@@ -12,9 +12,7 @@
 </head>
 <body>
 
-<!-- ╔══════════════════════════════════════════════════════╗
-     ║  TOPBAR                                              ║
-     ╚══════════════════════════════════════════════════════╝ -->
+<!-- TOPBAR -->
 <div class="topbar">
   <div class="wrap">
     <div class="tb-l">
@@ -31,9 +29,7 @@
   </div>
 </div>
 
-<!-- ╔══════════════════════════════════════════════════════╗
-     ║  NAVBAR                                              ║
-     ╚══════════════════════════════════════════════════════╝ -->
+<!-- NAVBAR -->
 <nav class="navbar">
   <div class="wrap">
     <button class="nav-brand" onclick="show('inicio')">
@@ -73,9 +69,7 @@
 </div>
 
 
-<!-- ╔══════════════════════════════════════════════════════╗
-     ║  INICIO                                              ║
-     ╚══════════════════════════════════════════════════════╝ -->
+<!-- INICIO -->
 <section class="psec active" id="sec-inicio">
 
   <div class="hero">
@@ -133,12 +127,13 @@
                   <div class="hc-opt-icon">2m³</div>
                   <div>
                     <div class="hc-opt-name">Volqueta Pequeña</div>
-                    <div class="hc-opt-cap">Reformas, jardinería, patios</div>
+                    <div class="hc-opt-cap">Próximamente</div>
+                    <!-- <div class="hc-opt-cap">Reformas, jardinería, patios</div> -->
                   </div>
                 </div>
-                <div class="hc-opt-price">$2.750<span>+ IVA / 48hs</span></div>
+                <div class="hc-opt-price">$ -<span>+ IVA / 48hs</span></div>
               </div>
-              <div class="hc-opt">
+              <div class="hc-opt" style="border: 3px solid red;">
                 <div class="hc-opt-info">
                   <div class="hc-opt-icon">6m³</div>
                   <div>
@@ -153,10 +148,11 @@
                   <div class="hc-opt-icon">10m³</div>
                   <div>
                     <div class="hc-opt-name">Volqueta Grande</div>
-                    <div class="hc-opt-cap">Podas, grandes volúmenes</div>
+                    <div class="hc-opt-cap">Próximamente</div>
+                    <!-- <div class="hc-opt-cap">Podas, grandes volúmenes</div> -->
                   </div>
                 </div>
-                <div class="hc-opt-price">$5.000<span>+ IVA / 48hs</span></div>
+                <div class="hc-opt-price">$ -<span>+ IVA / 48hs</span></div>
               </div>
             </div>
             <a href="https://wa.me/59891626226" target="_blank" class="btn btn-primary hc-btn">
@@ -237,9 +233,7 @@
 </section>
 
 
-<!-- ╔══════════════════════════════════════════════════════╗
-     ║  SERVICIOS Y PRECIOS                                 ║
-     ╚══════════════════════════════════════════════════════╝ -->
+<!-- SERVICIOS Y PRECIOS -->
 <section class="psec" id="sec-servicios">
   <div class="srv-sec">
     <div class="wrap">
@@ -250,7 +244,7 @@
       <div class="srv-grid">
 
         <!-- 2m³ -->
-        <div class="srv-card">
+        <div class="srv-card-soon">
           <div class="srv-img">
             <img src="img/volquetas/v1.jpg" alt="Volqueta Pequeña" onerror="this.parentElement.style.background='#2a2a2a'">
             <div class="srv-img-label">2 m³</div>
@@ -258,20 +252,27 @@
           <div class="srv-body">
             <div class="srv-name">VOLQUETA PEQUEÑA</div>
             <div class="srv-cap">Capacidad: 2 m³ — Acceso reducido</div>
+            <!--
             <ul class="srv-uses">
               <li><div class="srv-check">✓</div>Escombros de pequeñas reformas</li>
               <li><div class="srv-check">✓</div>Trabajos de jardinería y poda</li>
               <li><div class="srv-check">✓</div>Limpieza de hogar y patios</li>
               <li><div class="srv-check">✓</div>Espacios con acceso reducido</li>
             </ul>
+            -->
             <div class="srv-price-wrap">
               <div class="srv-price">
+                <div class="srv-amt">Próximamente</div>            
+            <!--
                 <div class="srv-amt">$2.750</div>
                 <div class="srv-period">+ IVA por 48 hs</div>
+            -->
               </div>
+              <!--
               <div class="srv-tax">Precio incluye entrega y retiro en Maldonado ciudad</div>
+              -->
             </div>
-            <button class="btn btn-outline-dark srv-cta" onclick="show('contacto')">Solicitar esta volqueta →</button>
+            <button class="btn btn-outline-dark srv-cta" onclick="show('contacto')">Contactanos →</button>
           </div>
         </div>
 
@@ -302,7 +303,7 @@
         </div>
 
         <!-- 10m³ -->
-        <div class="srv-card">
+        <div class="srv-card-soon">
           <div class="srv-img">
             <img src="img/volquetas/v1.jpg" alt="Volqueta Grande" onerror="this.parentElement.style.background='#2a2a2a'">
             <div class="srv-img-label">10 m³</div>
@@ -310,20 +311,27 @@
           <div class="srv-body">
             <div class="srv-name">VOLQUETA GRANDE</div>
             <div class="srv-cap">Capacidad: 10 m³ — Solo material liviano</div>
+            <!--
             <ul class="srv-uses">
               <li><div class="srv-check">✓</div>Poda de árboles y jardines</li>
               <li><div class="srv-check">✓</div>Residuos de gran volumen</li>
               <li><div class="srv-check">✓</div>Proyectos de gran porte</li>
               <li><div class="srv-check" style="background:#888">✗</div>No apta para escombros pesados</li>
             </ul>
+            -->
             <div class="srv-price-wrap">
               <div class="srv-price">
+                <div class="srv-amt">Próximamente</div>
+                <!--
                 <div class="srv-amt">$5.000</div>
                 <div class="srv-period">+ IVA por 48 hs</div>
+                -->
               </div>
+              <!--
               <div class="srv-tax">Precio incluye entrega y retiro en Maldonado ciudad</div>
+              -->
             </div>
-            <button class="btn btn-outline-dark srv-cta" onclick="show('contacto')">Solicitar esta volqueta →</button>
+            <button class="btn btn-outline-dark srv-cta" onclick="show('contacto')">Contactanos →</button>
           </div>
         </div>
 
@@ -402,9 +410,7 @@
 </section>
 
 
-<!-- ╔══════════════════════════════════════════════════════╗
-     ║  CÓMO FUNCIONA                                       ║
-     ╚══════════════════════════════════════════════════════╝ -->
+<!-- CÓMO FUNCIONA -->
 <section class="psec" id="sec-como">
   <div class="process-sec">
     <div class="wrap">
@@ -492,9 +498,7 @@
 </section>
 
 
-<!-- ╔══════════════════════════════════════════════════════╗
-     ║  COBERTURA                                           ║
-     ╚══════════════════════════════════════════════════════╝ -->
+<!-- COBERTURA -->
 <section class="psec" id="sec-cobertura">
   <div class="cov-sec">
     <div class="wrap">
@@ -559,9 +563,7 @@
 </section>
 
 
-<!-- ╔══════════════════════════════════════════════════════╗
-     ║  NOSOTROS                                            ║
-     ╚══════════════════════════════════════════════════════╝ -->
+<!-- NOSOTROS -->
 <section class="psec" id="sec-nosotros">
 
   <!-- Hero nosotros -->
@@ -688,9 +690,7 @@
 </section>
 
 
-<!-- ╔══════════════════════════════════════════════════════╗
-     ║  CONTACTO                                            ║
-     ╚══════════════════════════════════════════════════════╝ -->
+<!-- CONTACTO -->
 <section class="psec" id="sec-contacto">
   <div class="con-sec">
     <div class="wrap">

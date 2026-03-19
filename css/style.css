@@ -355,7 +355,7 @@ img { max-width: 100%; display: block; }
   background: var(--off);
 }
 .hc-opt:hover { border-color: var(--r); background: var(--wh); }
-.hc-opt.selected { border-color: var(--r); background: var(--rg); }
+/* .hc-opt.selected { border-color: var(--r); background: var(--rg); } */
 .hc-opt-info { display: flex; align-items: center; gap: 12px; }
 .hc-opt-icon {
   width: 36px; height: 36px;
@@ -488,6 +488,34 @@ img { max-width: 100%; display: block; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px; margin-top: 48px;
+}
+.srv-card-soon {
+  background: var(--wh);
+  border: 2px solid var(--g5);
+  height: fit-content;
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative; 
+  overflow: hidden;
+  transition: all .28s;
+}
+.srv-card-soon:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 60px var(--shb);
+  border-color: var(--r);
+}
+.srv-card-soon.featured {
+  border-color: var(--r);
+  transform: translateY(-8px);
+  box-shadow: 0 24px 60px var(--shb);
+}
+.srv-card-soon.featured::before {
+  content: '⭐ MÁS SOLICITADA';
+  position: absolute; top: 0; left: 0; right: 0;
+  background: var(--r); color: #fff;
+  font-size: .65rem; font-weight: 700; letter-spacing: .15em;
+  text-align: center; padding: 6px;
 }
 .srv-card {
   background: var(--wh);
