@@ -1134,16 +1134,30 @@ img { max-width: 100%; display: block; }
 
   /* ── Hero: quitar min-height rígido ── */
   .hero { min-height: auto; }
-  .hero-main { padding: 52px 0 40px; }
-  .hero-inner { grid-template-columns: 1fr; gap: 36px; }
-  /* Esconder la tarjeta lateral en mobile — ya hay CTA de WA */
-  .hero-card { display: none; }
+  .hero-main { padding: 48px 0 36px; }
+  .hero-inner { grid-template-columns: 1fr; gap: 32px; }
   .hero h1 { font-size: clamp(2.8rem, 9vw, 4.2rem); }
   .hero-sub { font-size: .96rem; margin: 18px 0 28px; }
   .hero-btns { flex-direction: column; gap: 10px; }
   .hero-btns .btn { width: 100%; justify-content: center; }
   .hero-metrics { margin-top: 36px; }
   .hm { padding: 20px 16px 0; }
+
+  /* ── Hero card: mostrar apilada abajo, compacta ── */
+  .hero-card {
+    display: block;
+    max-width: 100%;
+    padding: 24px 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,.4);
+  }
+  .hero-card h3 { font-size: 1.25rem; margin-bottom: 4px; }
+  .hero-card .sub { margin-bottom: 16px; }
+  .hc-options { gap: 8px; margin-bottom: 16px; }
+  .hc-opt { padding: 11px 13px; }
+  .hc-opt-icon { width: 32px; height: 32px; font-size: .82rem; }
+  .hc-opt-name { font-size: .85rem; }
+  .hc-opt-cap { font-size: .7rem; }
+  .hc-opt-price { font-size: 1.15rem; }
 
   /* ── Urgency bar: simplificar en mobile ── */
   .urgency-bar .wrap { gap: 8px; justify-content: center; text-align: center; }
@@ -1246,7 +1260,10 @@ img { max-width: 100%; display: block; }
   .val-sec-inner { padding: 44px 0; }
   .mvv-block { padding: 32px 20px; }
   .con-form-wrap { padding: 24px 18px 28px; }
-  .hero-card { display: none; }
+
+  /* ── Hero card: aún más compacta en pantallas chicas ── */
+  .hero-card { padding: 20px 16px; }
+  .hc-opt-price span { display: none; } /* ocultar "+ IVA / 48hs" para ahorrar espacio */
 
   /* ── Tipografía ── */
   .sec-h { font-size: clamp(1.7rem, 7vw, 2.2rem); }
