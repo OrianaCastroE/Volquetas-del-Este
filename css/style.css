@@ -1231,7 +1231,7 @@ img { max-width: 100%; display: block; }
 
   /* ── Hero métricas: fila de 3 centrada, no columna ── */
   .hero-main { padding: 40px 0 32px; }
-  .hero h1 { font-size: clamp(2.4rem, 10vw, 3.2rem); }
+  .hero h1 { font-size: clamp(3.2rem, 10vw, 4rem); }
   .hero-metrics {
     display: flex; flex-direction: row;
     flex-wrap: nowrap; margin-top: 28px;
