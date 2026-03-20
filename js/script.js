@@ -143,7 +143,7 @@ function initForm() {
     btn.textContent = 'Enviando...';
 
     try {
-      var res = await fetch('https://formspree.io/f/xeerkepg', {
+      var res = await fetch('https://formspree.io/f/xojkbdql', {
         method: 'POST',
         body: new FormData(this),
         headers: { 'Accept': 'application/json' }

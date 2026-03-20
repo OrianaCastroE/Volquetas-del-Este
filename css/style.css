@@ -71,7 +71,7 @@ img { max-width: 100%; display: block; }
 .sec-h span { color: var(--r); }
 .sec-p {
   font-size: 1.02rem; color: var(--g2);
-  line-height: 1.8; max-width: 580px;
+  line-height: 1.8; max-width: 800px;
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -495,7 +495,6 @@ img { max-width: 100%; display: block; }
   height: fit-content;
   display: flex; 
   flex-direction: column;
-  justify-content: space-between;
   position: relative; 
   overflow: hidden;
   transition: all .28s;
