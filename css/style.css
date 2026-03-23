@@ -758,7 +758,7 @@ img { max-width: 100%; display: block; }
   padding: 20px 0; border-right: 1px solid rgba(255,255,255,.07);
   text-align: center;
 }
-.nos-kpi:first-child { text-align: left; }
+.nos-kpi:first-child { text-align: center; }
 .nos-kpi:last-child { border-right: none; }
 .nos-kpi-n {
   font-family: 'Anton', sans-serif; font-size: 1.9rem;
