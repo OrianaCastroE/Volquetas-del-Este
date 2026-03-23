@@ -169,7 +169,7 @@ img { max-width: 100%; display: block; }
   padding: 0;
 }
 .nav-brand img.nav-logo-img {
-  height: 42px; width: auto; display: block;
+  height: 50px; width: auto; display: block;
 }
 /* Hide old icon+text fallback */
 .nav-brand-icon { display: none; }
@@ -888,9 +888,9 @@ img { max-width: 100%; display: block; }
 .rel-item {
   display: flex; align-items: center; justify-content: space-between; gap: 24px;
   /*  
-  background: rgba(255,255,255,.04);
-  */
   background: rgba(155, 27, 27, 0.478);
+  */
+  background: rgba(255,255,255,.04);
   border: 1px solid rgba(255,255,255,.07);
   padding: 24px 32px;
   transition: border-color .25s;
