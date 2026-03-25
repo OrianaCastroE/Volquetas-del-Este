@@ -661,7 +661,7 @@ img { max-width: 100%; display: block; }
 }
 .pay-methods {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
   margin-top: 24px;
 }
@@ -708,17 +708,18 @@ img { max-width: 100%; display: block; }
 /* ═══════════════════════════════════════════════════════
    FAQ
 ═══════════════════════════════════════════════════════ */
-.faq-wrap { max-width: 760px; margin: 48px auto 0; }
+.faq-wrap { width: 100%; min-width: 0; max-width: 760px; margin: 48px auto 0; }
 .fq {
   border-bottom: 1px solid rgba(255,255,255,.07);
   cursor: pointer;
 }
 .fq:first-child { border-top: 1px solid rgba(255,255,255,.07); }
 .fq-q {
-  display: flex; justify-content: space-between; align-items: center;
+  display: grid; grid-template-columns: 1fr auto; align-items: flex-start;
   padding: 20px 4px;
   font-size: .96rem; font-weight: 600; color: rgba(255,255,255,.8);
-  gap: 16px;
+  line-height: 1.5;
+  gap: 14px;
 }
 .fq-ico {
   width: 28px; height: 28px; flex-shrink: 0;
@@ -734,7 +735,7 @@ img { max-width: 100%; display: block; }
   font-size: .88rem; color: rgba(255,255,255,.4);
   line-height: 1.8; padding: 0 4px;
 }
-.fq.open .fq-a { max-height: 300px; padding-bottom: 20px; }
+.fq.open .fq-a { max-height: 520px; padding-bottom: 20px; }
 
 /* ═══════════════════════════════════════════════════════
    COBERTURA
@@ -1268,6 +1269,26 @@ img { max-width: 100%; display: block; }
   .pay-methods { grid-template-columns: 1fr; gap: 10px; }
   .pay-title { font-size: 1.55rem; }
 
+  /* ── FAQ ── */
+  .faq-wrap {
+    max-width: 100%;
+    margin: 28px auto 0;
+  }
+  .fq-q {
+    font-size: .9rem;
+    padding: 16px 4px;
+    gap: 12px;
+  }
+  .fq-ico {
+    width: 24px;
+    height: 24px;
+    font-size: .7rem;
+  }
+  .fq-a {
+    font-size: .84rem;
+    line-height: 1.7;
+  }
+
   /* ── Cobertura ── */
   .cov-sec { padding: 56px 0; }
   .cov-layout { grid-template-columns: 1fr; }
@@ -1350,6 +1371,14 @@ img { max-width: 100%; display: block; }
   .perm-page-grid { grid-template-columns: 1fr; }
   .process-grid { grid-template-columns: 1fr; }
   .sponsors-grid { grid-template-columns: 1fr 1fr; }
+
+  /* ── FAQ ── */
+  .faq-wrap { margin-top: 24px; }
+  .fq-q {
+    font-size: .86rem;
+    padding: 14px 2px;
+  }
+  .fq.open .fq-a { max-height: 680px; }
 
   /* ── Secciones ── */
   .why-sec, .srv-sec, .process-sec,
