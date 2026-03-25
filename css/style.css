@@ -644,6 +644,68 @@ img { max-width: 100%; display: block; }
 }
 
 /* ═══════════════════════════════════════════════════════
+  METODOS DE PAGO
+═══════════════════════════════════════════════════════ */
+.pay-title {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.8rem;
+  color: #fff;
+  letter-spacing: .03em;
+  margin-bottom: 8px;
+}
+.pay-lead {
+  color: rgba(255,255,255,.58);
+  margin-bottom: 18px;
+  line-height: 1.75;
+  max-width: 760px;
+}
+.pay-methods {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+.pm-card {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 16px;
+  background: rgba(255,255,255,.03);
+  border: 1.5px solid rgba(255,255,255,.09);
+  transition: border-color .22s, background .22s, transform .22s;
+}
+.pm-card:hover {
+  border-color: var(--r);
+  background: rgba(217,26,26,.09);
+  transform: translateY(-2px);
+}
+.pm-icon {
+  width: 34px; height: 34px;
+  background: var(--r); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; flex-shrink: 0;
+}
+.pm-content strong {
+  display: block;
+  font-size: .9rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: .02em;
+  margin-bottom: 5px;
+}
+.pm-content p {
+  font-size: .82rem;
+  color: rgba(255,255,255,.58);
+  line-height: 1.65;
+  text-transform: none;
+}
+.pay-note {
+  color: rgba(255,255,255,.45);
+  margin-top: 16px;
+  line-height: 1.75;
+}
+
+/* ═══════════════════════════════════════════════════════
    FAQ
 ═══════════════════════════════════════════════════════ */
 .faq-wrap { max-width: 760px; margin: 48px auto 0; }
@@ -1015,6 +1077,21 @@ img { max-width: 100%; display: block; }
   padding: 18px 22px; margin-top: 24px; font-size: .87rem; color: var(--blk); line-height: 1.7;
 }
 .perm-alert a { color: var(--r); font-weight: 700; cursor: pointer; }
+/* Permisos adicionales */
+.srv-add-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px; margin-top: 24px;
+}
+.srv-add-card {
+  background: var(--off); border: 1.5px solid var(--g5);
+  padding: 20px; display: flex; gap: 14px;
+  align-items: flex-start; transition: all .22s;
+}
+.srv-add-card:hover { border-color: var(--r); box-shadow: 06px 20px var(--shb); }
+.srv-add-ico { font-size: 1.4rem; flex-shrink: 0; }
+.srv-add-card strong { display: block; font-weight: 700; font-size: .95rem; color: var(--blk); margin-bottom: 4px; }
+.srv-add-card p { font-size: .83rem; color: var(--g2); line-height: 1.6; }
+
 /* seguros grid */
 .seg-cards {
   display: grid; grid-template-columns: repeat(3, 1fr);
@@ -1109,6 +1186,7 @@ img { max-width: 100%; display: block; }
   .hero-inner { grid-template-columns: 1fr; gap: 40px; }
   .hero-card { max-width: 560px; }
   .srv-grid { grid-template-columns: 1fr 1fr; }
+  .pay-methods { grid-template-columns: 1fr 1fr; }
   .process-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
   .process-grid::before { display: none; }
   .nos-layout { grid-template-columns: 1fr; gap: 40px; }
@@ -1187,6 +1265,8 @@ img { max-width: 100%; display: block; }
   /* ── Process ── */
   .process-sec { padding: 56px 0; }
   .process-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .pay-methods { grid-template-columns: 1fr; gap: 10px; }
+  .pay-title { font-size: 1.55rem; }
 
   /* ── Cobertura ── */
   .cov-sec { padding: 56px 0; }
